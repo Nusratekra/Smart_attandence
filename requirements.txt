@@ -1,0 +1,9 @@
+# Core requirements
+Django>=3.2
+
+# Image handling
+Pillow
+
+# Optional: face recognition / face embeddings
+# This requires the native `dlib` dependency and a C++ build toolchain.
+face_recognition

@@ -7,8 +7,8 @@
 
 String lastRFID = "";
 
-const char* ssid = "realme C33";
-const char* password = "itsnafinabi";
+const char* ssid = "your wifi name";
+const char* password = "wifi pass";
 String serverURL = "http://your_local_ip:8000/api/checkin/";  // FIXED: Removed space!
 
 // ---- Camera Pin Config ----

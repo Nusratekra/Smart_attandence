@@ -12,8 +12,8 @@ MFRC522 rfid(SS_PIN, RST_PIN);
 #define CAM_SERIAL Serial2  // Serial connection to ESP32-CAM
 
 // ==================== NETWORK CONFIG ====================
-const char* ssid     = "realme C33";
-const char* password = "itsnafinabi";
+const char* ssid     = "your wifi name";
+const char* password = "wifi pass";
 String serverURL = "http://your_local_ip:8000/api/uid_scan/";  // CHANGE TO YOUR PC IP!
 
 // ==================== VARIABLES ====================

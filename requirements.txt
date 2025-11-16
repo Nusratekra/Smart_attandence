@@ -7,3 +7,25 @@ Pillow
 # Optional: face recognition / face embeddings
 # This requires the native `dlib` dependency and a C++ build toolchain.
 face_recognition
+
+Write-Host "🚀 Setting up Python environment..." -ForegroundColor Cyan
+
+# Create virtual environment if not exists
+if (-not (Test-Path "venv")) {
+    python -m venv venv
+    Write-Host "🌱 Virtual environment created." -ForegroundColor Green
+}
+
+# Activate environment
+& ".\venv\Scripts\activate"
+
+# Upgrade pip and core build tools
+pip install --upgrade pip setuptools wheel
+
+# Install cmake and dlib first
+pip install cmake dlib --no-cache-dir
+
+# Install remaining libraries
+pip install chardet click decorator face-recognition face-recognition-models idna imageio imageio-ffmpeg moviepy numpy pandas opencv-python Pillow proglog requests tqdm urllib3 wincertstore --ignore-installed
+
+Write-Host "🎉 Setup complete! Your environment is ready to use." -ForegroundColor Green
